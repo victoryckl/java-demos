@@ -26,10 +26,18 @@
 		<servlet-name>RegisterServlet</servlet-name>
 		<servlet-class>RegisterServlet</servlet-class>
 	</servlet>
-	
 	<servlet-mapping>
 		<servlet-name>RegisterServlet</servlet-name>
 		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UploadPhotoServlet</servlet-name>
+		<servlet-class>UploadPhotoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadPhotoServlet</servlet-name>
+		<url-pattern>/uploadPhoto</url-pattern>
 	</servlet-mapping>
 
 </web-app>

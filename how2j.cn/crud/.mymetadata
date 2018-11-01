@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="crud"
+  id="myeclipse.1541060920442"
+  context-root="/crud"
+  j2ee-spec="6.0"
+  archive="crud.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
