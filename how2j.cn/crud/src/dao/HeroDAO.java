@@ -95,7 +95,7 @@ public class HeroDAO {
 		try {
 			c = getConnection();
 			s = c.createStatement();
-			s.execute("delete * from hero where id="+id);
+			s.execute("delete from hero where id="+id);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

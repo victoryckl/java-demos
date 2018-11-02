@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>用AJAX以JSON方式获取数据</title>
+<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+	<input type="button" value="通过AJAX获取一个Hero对象" id="sender">
+	<div id="messageDiv"></div>
+	<script type="text/javascript">
+		$('#sender').click(function(){
+			var url="getOneServlet";
+			$.post(
+				url,
+				function(data){
+					var json=JSON.parse(data);
+					var name=json.hero.name;
+					var hp = json.hero.hp;
+					var damage = json.hero.damage;
+					$('#messageDiv').html("名称："+name+"<br>血量："+hp+"<br>伤害："+damage);
+				});
+		});
+	</script>
+</body>
+</html>
