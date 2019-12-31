@@ -3,7 +3,17 @@ import java.io.File;
 public class Main {
 
 	public static void main(String[] args) {
-		rmDir("f:/temp/111/dtat");
+		//rmDir("f:/temp/111/dtat");
+		testSplit();
+	}
+	
+	private static void testSplit() {
+		String str = "rén zhī chū	   xìng běn shàn";
+		str = str.replaceAll("\t", " ").replaceAll(" {2,}", " ");
+		String[] ss = str.split(" ");
+		for (String s : ss) {
+			System.out.println("-"+s+"-");
+		}
 	}
 	
 	public static boolean rmDir(String path) {
