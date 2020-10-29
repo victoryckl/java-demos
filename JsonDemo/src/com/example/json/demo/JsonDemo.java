@@ -19,6 +19,28 @@ public class JsonDemo {
 		jArray.add(json1);
 		
 		System.out.println(jArray);
+		
+		JSONObject jo = new JSONObject();
+		jo.put("xxx", "xxx");
+		jo.put("zzz", getkIdsJSONArray("233,3425,2,3"));
+		System.out.println(jo);
+		
+		String zzz = jo.getString("zzz");
+		System.out.println(zzz);
+		JSONArray ja = JSONArray.fromObject(zzz);
+		System.out.println(ja);
 	}
 
+	public static JSONArray getkIdsJSONArray(String kIds) {
+		JSONArray ja = new JSONArray();
+		if (kIds == null || kIds.isEmpty()) return ja;
+		String[] ss = kIds.split(",");
+		for (String s : ss) {
+			if (s == null) continue;
+		    s = s.trim();
+		    if (s.isEmpty()) continue;
+		    ja.add(Integer.parseInt(s));
+		}
+		return ja;
+	}
 }
