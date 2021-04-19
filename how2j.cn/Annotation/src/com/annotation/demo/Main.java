@@ -40,6 +40,5 @@ public class Main {
 		Main main = new Main();
 		main.myMeth();
 		main.myMeth2();
-		Callable<V>
 	}
 }
