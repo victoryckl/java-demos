@@ -17,9 +17,8 @@ public class Main {
 	private static final long TAC_FAC = 86740002000000L;
 	private static final int MAX_SNR = 999999;
 
-	public static void main(String[] args) {		
-		long imei = 86740002031661L;
-		genImeiTest(10000,20000);
+	public static void main(String[] args) {
+		genImeiTest(10000,10010);
 	}
 	
 	public static void genImeiTest(int start, int end) {
